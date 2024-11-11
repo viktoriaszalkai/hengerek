@@ -14,21 +14,27 @@ public class HengerProgram {
     public static void main(String[] args) {
         new HengerProgram().run();
     }
-
-    public void run(){
-        System.out.printf("A felhasznált hengerek (%d db):\n", db);
-        MertaniHenger mertani = new MertaniHenger(30,10);
-        TomorHenger tomor = new TomorHenger(10,20,2);
-        LyukasHenger lyukas = new LyukasHenger(10,31,2);
-        System.out.println("m = " +mertani);
-        System.out.println("t = " +tomor);
-        System.out.println("ly = " +lyukas);
-        System.out.println("Átlagtérfogat: "+ this.atlagTerfogat());
-        System.out.println("Csövek össz. súlya: "+ this.csovekSulya());
-    }
-
     public HengerProgram() {
         hengerek = new ArrayList<>();
+        hengerek.add(new MertaniHenger(30,10));
+        hengerek.add(new TomorHenger(10,20,1));
+        hengerek.add(new TomorHenger(10,20,0.5));
+        hengerek.add(new LyukasHenger(10,31,0.1));
+        hengerek.add(new LyukasHenger(10,31,0.5));
+        hengerek.add(new LyukasHenger(10,31,0.8));
+    }
+    public void run(){
+        int db = MertaniHenger.getHengerDarab();
+        System.out.printf("A felhasznált hengerek (%d db):\n", db);
+        //for (MertaniHenger hengerek: hengerek){
+        //    System.out.println(hengerek);
+        //}
+
+        for(MertaniHenger henger : this.lista()){
+            System.out.println(henger);
+        }
+        System.out.println("Átlagtérfogat: "+ this.atlagTerfogat());
+        System.out.println("Csövek össz. súlya: "+ this.csovekSulya());
     }
     public double atlagTerfogat(){
         return 0.0;
