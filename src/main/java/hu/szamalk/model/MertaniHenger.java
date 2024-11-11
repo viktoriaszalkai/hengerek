@@ -37,8 +37,8 @@ public class MertaniHenger {
     @Override
     public String toString() {
         return "MertaniHenger{" +
-                "sugar=" + sugar +
-                ", magassag=" + magassag +
+                "sugar = " + sugar +
+                ", magassag = " + magassag +
                 '}';
     }
 }

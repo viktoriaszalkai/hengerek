@@ -23,8 +23,9 @@ public class LyukasHenger extends TomorHenger {
 
     @Override
     public String toString() {
-        return "LyukasHenger{" +
-                "falvastagsag=" + falvastagsag +
+        String os = super.toString();
+        return os + " --> LyukasHenger{" +
+                "falvastagsag = " + falvastagsag +
                 '}';
     }
 
