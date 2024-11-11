@@ -28,7 +28,7 @@ public class MertaniHenger {
 
 
     public double terfogat(){
-        return 0.0;
+        return (sugar*sugar)*Math.PI*magassag;
     }
 
     public static int getHengerDarab() {
@@ -41,5 +41,10 @@ public class MertaniHenger {
                 "sugar = " + sugar +
                 ", magassag = " + magassag +
                 '}';
+    }
+
+    //VESZÉLYES és nehéz használni
+    public static void setHengerDarab(int hengerDarab) {
+        MertaniHenger.hengerDarab = hengerDarab;
     }
 }

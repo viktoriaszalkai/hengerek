@@ -1,5 +1,7 @@
 package hu.szamalk.model;
 
+import hu.szamalk.HengerProgram;
+
 public class LyukasHenger extends TomorHenger {
     private double falvastagsag;
 
@@ -18,7 +20,15 @@ public class LyukasHenger extends TomorHenger {
 
     @Override
     public double terfogat() {
-        return super.terfogat();
+//        double atmero = 2* getSugar();
+//        return Math.PI*((Math.pow(Math.pow(atmero,2)-atmero-2*getFalvastagsag(),2))/4)*getMagassag();
+        double kulsoV = super.terfogat();
+        double belsoR = getSugar()-falvastagsag;
+        MertaniHenger belsoH = new MertaniHenger(belsoR,getMagassag());
+        double belsoV = belsoH.terfogat();
+
+        MertaniHenger.setHengerDarab(getHengerDarab()-1);
+        return kulsoV - belsoV;
     }
 
     @Override

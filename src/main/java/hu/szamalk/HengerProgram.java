@@ -16,12 +16,12 @@ public class HengerProgram {
     }
     public HengerProgram() {
         hengerek = new ArrayList<>();
-        hengerek.add(new MertaniHenger(30,10));
-        hengerek.add(new TomorHenger(10,20,1));
-        hengerek.add(new TomorHenger(10,20,0.5));
-        hengerek.add(new LyukasHenger(10,31,0.1));
-        hengerek.add(new LyukasHenger(10,31,0.5));
-        hengerek.add(new LyukasHenger(10,31,0.8));
+        hengerek.add(new MertaniHenger(1,1));
+        hengerek.add(new TomorHenger(1,1));
+        hengerek.add(new TomorHenger(1,1,0.5));
+        hengerek.add(new LyukasHenger(1,1,0.1));
+        hengerek.add(new LyukasHenger(1,1,0.5));
+        hengerek.add(new LyukasHenger(1,1,0.1));
     }
     public void run(){
         int db = MertaniHenger.getHengerDarab();
@@ -35,6 +35,7 @@ public class HengerProgram {
         }
         System.out.println("Átlagtérfogat: "+ this.atlagTerfogat());
         System.out.println("Csövek össz. súlya: "+ this.csovekSulya());
+        System.out.printf("A felhasznált hengerek (%d db):\n", db);
     }
     public double atlagTerfogat(){
         double ossz = 0.0;
