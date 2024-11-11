@@ -44,7 +44,7 @@ public class MertaniHenger {
     }
 
     //VESZÉLYES és nehéz használni
-    public static void setHengerDarab(int hengerDarab) {
-        MertaniHenger.hengerDarab = hengerDarab;
+    protected static void csokkentHengerDarab() {
+        MertaniHenger.hengerDarab--;
     }
 }

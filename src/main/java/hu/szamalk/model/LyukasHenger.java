@@ -27,7 +27,7 @@ public class LyukasHenger extends TomorHenger {
         MertaniHenger belsoH = new MertaniHenger(belsoR,getMagassag());
         double belsoV = belsoH.terfogat();
 
-        MertaniHenger.setHengerDarab(getHengerDarab()-1);
+        MertaniHenger.csokkentHengerDarab();
         return kulsoV - belsoV;
     }
 

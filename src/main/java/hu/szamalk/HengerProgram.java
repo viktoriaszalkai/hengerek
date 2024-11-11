@@ -16,11 +16,11 @@ public class HengerProgram {
     }
     public HengerProgram() {
         hengerek = new ArrayList<>();
-        hengerek.add(new MertaniHenger(1,1));
-        hengerek.add(new TomorHenger(1,1));
-        hengerek.add(new TomorHenger(1,1,0.5));
-        hengerek.add(new LyukasHenger(1,1,0.1));
-        hengerek.add(new LyukasHenger(1,1,0.5));
+//        hengerek.add(new MertaniHenger(1,1));
+//        hengerek.add(new TomorHenger(1,1));
+//        hengerek.add(new TomorHenger(1,1,0.5));
+//        hengerek.add(new LyukasHenger(1,1,0.1));
+//        hengerek.add(new LyukasHenger(1,1,0.5));
         hengerek.add(new LyukasHenger(1,1,0.1));
     }
     public void run(){
