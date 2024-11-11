@@ -37,7 +37,11 @@ public class HengerProgram {
         System.out.println("Csövek össz. súlya: "+ this.csovekSulya());
     }
     public double atlagTerfogat(){
-        return 0.0;
+        double ossz = 0.0;
+        for(MertaniHenger henger : this.lista()){
+            ossz += henger.terfogat();
+        }
+        return ossz/MertaniHenger.getHengerDarab();
     }
     public double csovekSulya(){
         return 0.0;
